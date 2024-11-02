@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Prompt = require('../models/prompt');
+const Prompt = require('./prompt');
 
 // Create a new prompt
 router.post('/prompts', async (req, res) => {
