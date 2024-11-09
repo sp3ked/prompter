@@ -1,0 +1,179 @@
+/* Home (landing) page */
+
+.home-page {
+  min-height: 100vh;
+  background-color: var(--white);
+}
+
+.section1 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+}
+
+.content-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 180px 20px 0;
+  margin-bottom: 30vh;
+}
+
+.Text {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.title {
+  font-size: 3em;
+  background: linear-gradient(to right, #0e7eda 25%, #3fc8eb 50%, #108cf1 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  padding-bottom: 0.08em;
+}
+
+.undertitle {
+  color: rgba(75, 104, 233, 0.582);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.search-container {
+  width: 60%;
+  max-width: 800px;
+  margin-top: 0.75em;
+}
+
+.searchbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  background: linear-gradient(45deg, #0e7eda, #c4ebf5, #108cf1);
+  background-size: 200% 200%;
+  animation: gradientBorder 5s ease infinite;
+  border-radius: 25px;
+}
+
+.search-icon {
+  position: absolute;
+  transform: translateY(-50%);
+  color: #108cf1;
+  font-size: 18px;
+  pointer-events: none;
+  right: 3%;
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.searchbar input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 23px;
+  font-size: 16px;
+  outline: none;
+  background-color: white;
+  color: #757575;
+}
+
+.searchbar input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+}
+
+.searchbar input.scroll-out::placeholder {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.searchbar input.scroll-in::placeholder {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.section1py {
+  text-align: right;
+  flex: 0 2 auto;
+  margin-left: auto;
+}
+
+.section1py img {
+  max-width: 80%;
+  height: auto;
+}
+
+.secButton1 {
+  background: var(--black);
+  color: var(--white);
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+  z-index: 1;
+  width: auto;
+  border-color: white;
+  margin-bottom: 1.5em;
+}
+
+.secButton1:hover {
+  background: var(--blue);
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@keyframes move {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45vh;
+  overflow: hidden;
+}
+
+.waves-container > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

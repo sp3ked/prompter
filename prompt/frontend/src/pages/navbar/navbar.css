@@ -1,0 +1,137 @@
+.nav {
+  z-index: 1000;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1em;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  padding: 0.5em 1em;
+  background: rgba(196, 235, 245, 0.52);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgb(108, 209, 235);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.login-page-navv {
+  background: rgb(196, 235, 245);
+}
+
+.nav.scrolled {
+  top: 0;
+  width: 99%;
+  max-width: 100%;
+  border-radius: 0;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.cent-navv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.navv-item {
+  padding: 10px 15px;
+  color: #0d80dd9f;
+  text-decoration: none;
+  z-index: 0;
+  font-size: 18px;
+}
+
+.navv-item span {
+  position: relative;
+  display: inline-block;
+}
+
+.navv-item span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background-color: #0d80dd9f;
+  transition: width 0.3s ease-out;
+  box-shadow: 0 0 8px white;
+}
+
+.navv-item:hover span::after {
+  width: 100%;
+}
+
+/* Login Button Styles */
+.login-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.primary-button {
+  position: relative;
+  border: 2px solid #0d80dd9f;
+  border-radius: 500px;
+  width: 150px;
+  height: 48px;
+  overflow: hidden;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #0d80dd9f;
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  border: 2px solid #0197f6;
+  color: white;
+}
+
+.primary-button .round {
+  border-radius: 50%;
+  background-color: #0197f6;
+  position: absolute;
+  z-index: 1;
+  animation: scale-down 0.2s forwards;
+}
+
+.primary-button.animate .round {
+  animation: scale-up 0.5s forwards;
+}
+
+@keyframes scale-up {
+  to {
+    transform: scale(600);
+  }
+}
+
+@keyframes scale-down {
+  from {
+    transform: scale(600);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.primary-button span {
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,167 @@
+.section2 {
+  height: 115vh;
+  background: rgb(255, 155, 47);
+  background: linear-gradient(
+    182deg,
+    #0f89ec 15%,
+    #033966d2 53%,
+    #012b4ee1 80%
+  );
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container-sec2 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 5em 1em;
+  grid-template-areas:
+    ". Rentimg Rentimg . RentContent RentContent RentContent RentContent ."
+    ". HostContent HostContent HostContent HostContent . Hostimg Hostimg .";
+}
+
+.Renttitle {
+  grid-area: Renttitle;
+}
+.Hosttitle {
+  grid-area: Hosttitle;
+}
+
+.HostContent {
+  grid-area: HostContent;
+  text-align: left;
+  background-color: var(--blue);
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px;
+  border: 2px solid white;
+}
+
+.RentContent {
+  grid-area: RentContent;
+  text-align: left;
+  background-color: var(--blue);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+.Rentimg {
+  grid-area: Rentimg;
+}
+
+.Hostimg {
+  grid-area: Hostimg;
+}
+
+.Rentimg,
+.Hostimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hosttitle h2,
+.Renttitle h2 {
+  color: var(--white);
+  font-size: 2em;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+}
+
+.secButton {
+  background: #2600ff25;
+  color: var(--white);
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+  z-index: 1;
+  width: auto;
+  border-color: white;
+}
+
+.secButton:hover {
+  background: #2600ff46;
+}
+
+.mainbutton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+  z-index: 1;
+  padding: 10px 30px;
+  width: auto;
+}
+
+.mainbutton:hover {
+  background: var(--black);
+  /* letter-spacing: 0.5em; */
+  /* box-shadow: 0 0 35px var(--black); */
+}
+
+.mainbutton:before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: var(--blue);
+}
+
+.mainbutton span {
+  position: relative;
+  z-index: 1;
+}
+
+.mainbutton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.mainbutton i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: var(--blue);
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+a:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.mainbutton i::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: var(--blue);
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+a:hover i::after {
+  width: 20px;
+  left: 80%;
+}

@@ -1,0 +1,76 @@
+/* Section 4 */
+.section4 {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2em;
+  box-sizing: border-box;
+  background-image: url("/sec4back.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.border-wrap-outer,
+.border-wrap-inner,
+.border-wrap-last {
+  position: relative;
+  border-radius: 15px;
+  padding: 10px;
+  background: transparent;
+}
+
+.border-wrap-last {
+  border: 2px solid var(--blue); /* last border */
+}
+
+.border-wrap-outer {
+  border: 2px solid var(--blue); /* First border */
+}
+
+.border-wrap-inner {
+  border: 2px solid var(--blue); /* Second border */
+}
+
+.section4 .contact {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 2em;
+  max-width: 800px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 0 0 2px var(--lblue) inset; /* Innermost border */
+}
+
+.section4 h2 {
+  color: #ff6404;
+  margin-bottom: 1em;
+}
+
+.section4 p {
+  margin-bottom: 1em;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.email-button {
+  background: #ff6404;
+  color: #000;
+  border: 5px;
+  border-color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.email-button:hover {
+  background: #e55a00;
+}
