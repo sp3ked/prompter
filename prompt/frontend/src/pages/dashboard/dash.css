@@ -1,0 +1,162 @@
+/* Main Layout */
+.dashboard {
+  min-height: 100vh;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0284c7;
+}
+
+.nav-item {
+  cursor: pointer;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-icon {
+  cursor: pointer;
+  color: #64748b;
+}
+
+/* Search */
+.search-container {
+  position: relative;
+  width: 40%;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  background: white;
+}
+
+
+/* Main Content */
+.main-content {
+  padding: 0 24px 24px;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+/* Prompt Sections */
+.prompt-section {
+  margin-bottom: 32px;
+  background: white;
+  padding: 24px;
+
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.prompt-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.prompt-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+
+/* Custom Scrollbar */
+.prompt-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.prompt-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.prompt-scroll::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Prompt Cards */
+.prompt-card {
+  min-width: 160px;
+  height: 160px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.prompt-card:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+}
+
+.prompt-card span {
+  font-size: 16px;
+  color: #334155;
+}
+
+.new-prompt {
+  color: #64748b;
+}
+
+.empty {
+  background: #f8fafc;
+  cursor: default;
+}
+
+.empty:hover {
+  border-color: #e2e8f0;
+  box-shadow: none;
+}

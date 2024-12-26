@@ -137,27 +137,6 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="section4">
-        <div class="border-wrap-last">
-          <div class="border-wrap-outer">
-            <div class="border-wrap-inner">
-              <div className="contact">
-                <h2>Contact</h2>
-                <p>
-                  Do you have GPU computing needs and want help deploying it on
-                  our cost-effective infrastructure? Or just want to chat? We
-                  are here to help! Let us know more about your project and we
-                  can customize a solution to fit your needs.
-                </p>
-                <p>Email us at support@pyras.ai</p>
-                <div className="contact-buttonn">
-                  <button className="email-button">Email us!</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

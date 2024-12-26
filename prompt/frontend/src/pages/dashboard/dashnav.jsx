@@ -1,39 +1,24 @@
-import React from "react";
-import { Home, User, ShoppingCart, Bell, LogOut } from "lucide-react";
-import "./dashnav.css";
+import React from 'react';
+import { Settings, User, Search } from 'lucide-react';
 
-const DashNavbar = ({ onOpenCart, showAccount, setShowAccount }) => {
+const DashNav = () => {
   return (
-    <nav className="dash-navbar">
-      <div className="nav-header">
-        <img src="/SSblue.png" alt="Logo" className="nav-logo" />
+    <nav className="nav-bar">
+      <div className="nav-left">
+        <span className="logo">chainer</span>
+        <span className="nav-item">My Prompts</span>
+        <span className="nav-item">Learn</span>
       </div>
-      <div className="nav-items">
-        <button className="nav-item" onClick={() => setShowAccount(false)}>
-          <Home size={24} />
-          <span className="nav-title">Home</span>
-        </button>
-        <button onClick={onOpenCart} className="nav-item">
-          <ShoppingCart size={24} />
-          <span className="nav-title">Cart</span>
-        </button>
-        <button className="nav-item">
-          <Bell size={24} />
-          <span className="nav-title">Notifications</span>
-        </button>
+      <div className="search-container">
+        <Search className="search-icon" size={20} />
+        <input type="text" placeholder="Search" className="search-input" />
       </div>
-      <div className="bottom-nav-items">
-        <button onClick={() => setShowAccount(!showAccount)} className="nav-item">
-          <User size={24} />
-          <span className="nav-title">Account</span>
-        </button>
-        <button className="nav-item logout-icon">
-          <LogOut size={24} />
-          <span className="nav-title">Logout</span>
-        </button>
+      <div className="nav-right">
+        <Settings className="nav-icon" size={20} />
+        <User className="nav-icon" size={20} />
       </div>
     </nav>
   );
 };
 
-export default DashNavbar;
+export default DashNav;
